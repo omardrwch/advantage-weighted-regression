@@ -68,4 +68,3 @@ if __name__ == '__main__':
     print(f"\nOutput dir = {manager.output_dir}\n")
     manager.fit()
     manager.save()
-

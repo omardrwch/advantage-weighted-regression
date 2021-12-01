@@ -305,7 +305,7 @@ class AWRAgent(Agent):
             state = self.compute_state(next_obs, state, action)
 
             # check max episode length
-            done = done and (episode_timesteps < self._max_episode_length)
+            done = done or (episode_timesteps == self._max_episode_length - 1)
 
             # store data
             episode_rewards += reward
