@@ -349,6 +349,7 @@ class AWRAgent(Agent):
                 episode_rewards = 0.0
                 episode_timesteps = 0
                 observation = self.env.reset()
+                state = self.compute_state(observation)
 
 
     def policy(self, state, evaluation=False, deterministic=False):
